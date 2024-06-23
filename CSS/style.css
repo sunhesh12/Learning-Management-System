@@ -1,0 +1,49 @@
+/* Default (for larger screens like laptops) */
+body{
+    background-color: rgba(187, 255, 0, 0.199);
+}
+
+/* a{
+    text-decoration: none;
+    color: black;
+    width: max-content;
+    height: max-content;
+} */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 18rem;
+    margin: 20px;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 1024px) {
+    /* For tablets */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-items: center;
+    }
+  
+    .card {
+      margin: 20px 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* For mobile phones */
+    .card-container {
+      display: block;
+    }
+  
+    .card {
+      margin: 20px auto;
+      width: 90%; /* or any other width that suits the design */
+    }
+  }
+  
