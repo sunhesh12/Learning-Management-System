@@ -7,112 +7,87 @@
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<style>
+    .bg-image-vertical {
+        position: relative;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: auto 100%;
+    }
+
+    @media (min-width: 1025px) {
+        .h-custom-2 {
+            height: 100%;
+        }
+    }
+
+    .transparent-div {
+        /* display: flex; */
+        justify-content: center;
+        width: max-content;
+        text-align: center;
+        align-items: center;
+        height: max-content;
+        background-color: rgba(0, 0, 0, 0.363); /* Transparent background */
+    }
+</style>
+<body style="overflow: auto;">
+    <section class="vh-100 form-container">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">SE/FOC/USJ</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Calander.html">Calander</a>
-              </li>
-               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Subject
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">SDA</a></li>
-                  <li><a class="dropdown-item" href="#">ECN</a></li>
-                  <li><a class="dropdown-item" href="#">ECL</a></li>
-                  <li><a class="dropdown-item" href="#">FMSD</a></li>
-                  <li><a class="dropdown-item" href="#">GP</a></li>
-                  <li><a class="dropdown-item" href="#">MC</a></li>
-                  <li><a class="dropdown-item" href="#">AI</a></li>
-                  <li><a class="dropdown-item" href="#">WT</a></li>
-                  <!-- <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li> -->
-                </ul>
-              </li>
-              <!--<li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li> -->
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-      
-      <div class="card-container">
-        <div class="card" style="width: 18rem;">
-            <img src="images/download.jpeg" class="card-img-top" alt="...">
-            <div class="card-body" style="text-align: center;">
-                <h3>SDA</h3>
-                <a href="Calander.html" class="btn btn-primary btn-lg enable" tabindex="-1" role="button" aria-disabled="true">Get Note</a>
+            <div class="row">
+                <div class="col-sm-6 text-black">
+                    <div class="transparent-div">
+                        <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+                            <form style="width: 23rem;" id="loginForm">
+                                <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <label class="form-label" for="formUsername">Username</label>
+                                    <input type="text" id="formUsername" class="form-control form-control-lg" />
+                                    
+                                </div>
+
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <label class="form-label" for="formPassword">Password</label>
+                                    <input type="password" id="formPassword" class="form-control form-control-lg" />
+                                    
+                                </div>
+
+                                <div class="pt-1 mb-4">
+                                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" type="button" onclick="login()">Login</button>
+                                </div>
+
+                                <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+                                <p>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 px-0 d-none d-sm-block">
+                    <img src="images/developer.avif"
+                        alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+                </div>
             </div>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img src="images/download1.jpg" class="card-img-top" alt="...">
-            <div class="card-body" style="text-align: center;">
-                <h3>ECN</h3>
-                <a href="Calander.html" class="btn btn-primary btn-lg enable" tabindex="-1" role="button" aria-disabled="true">Get Note</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="images/download2.webp" class="card-img-top" alt="...">
-            <div class="card-body" style="text-align: center;">
-                <h3>ECL</h3>
-                <a href="Calander.html" class="btn btn-primary btn-lg enable" tabindex="-1" role="button" aria-disabled="true">Get Note</a>
-            </div>
-        </div>
-      </div>
-      <div class="card-container">
-        <div class="card" style="width: 18rem;">
-            <img src="images/download3.webp" class="card-img-top" alt="...">
-            <div class="card-body" style="text-align: center;">
-                <h3>FMSD</h3>
-                <a href="Calander.html" class="btn btn-primary btn-lg enable" tabindex="-1" role="button" aria-disabled="true">Get Note</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="images/download4.jpg" class="card-img-top" alt="...">
-            <div class="card-body" style="text-align: center;">
-                <h3>GP</h3>
-                <a href="Calander.html" class="btn btn-primary btn-lg enable" tabindex="-1" role="button" aria-disabled="true">Get Note</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="images/download5.jpg" class="card-img-top" alt="...">
-            <div class="card-body" style="text-align: center;">
-                <h3>MC</h3>
-                <a href="Calander.html" class="btn btn-primary btn-lg enable" tabindex="-1" role="button" aria-disabled="true">Get Note</a>
-            </div>
-        </div>
-      </div>
-      <div class="card-container">
-        <div class="card" style="width: 18rem;">
-            <img src="images/download6.avif" class="card-img-top" alt="...">
-            <div class="card-body" style="text-align: center;">
-                <h3>AI</h3>
-                <a href="Calander.html" class="btn btn-primary btn-lg enable" tabindex="-1" role="button" aria-disabled="true">Get Note</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="images/images.jpeg" class="card-img-top" alt="...">
-            <div class="card-body" style="text-align: center;">
-                <h3>WT</h3>
-                <a href="Calander.html" class="btn btn-primary btn-lg enable" tabindex="-1" role="button" aria-disabled="true">Get Note</a>
-            </div>
-        </div>
-      </div>
-      <script src="/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+    </section>
+    </div>
+    <script src="/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+    <script>
+        function login() {
+            const username = document.getElementById('formUsername').value;
+            const password = document.getElementById('formPassword').value;
+
+            if (username === '123' && password === '123') {
+                window.location.href = 'nextpage.html';  // Change this to the actual next page URL
+            } else {
+                alert('Invalid username or password');
+            }
+        }
+    </script>
 </body>
 </html>
