@@ -20,6 +20,10 @@ body{
     margin: 20px;
     box-sizing: border-box;
   }
+
+  .card:hover{
+    transform: scale(1.05);
+  }
   
   @media (max-width: 1024px) {
     /* For tablets */
